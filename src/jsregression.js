@@ -1,4 +1,4 @@
-var jsregression = jsregression || {};
+var jsregression = new Object();
 
 (function (jsr) {
     'use strict';
