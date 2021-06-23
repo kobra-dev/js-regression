@@ -1,12 +1,10 @@
 # js-regression
 Package provides javascript implementation of linear regression and logistic regression
 
-[![Build Status](https://travis-ci.org/chen0040/js-regression.svg?branch=master)](https://travis-ci.org/chen0040/js-regression) [![Coverage Status](https://coveralls.io/repos/github/chen0040/js-regression/badge.svg?branch=master)](https://coveralls.io/github/chen0040/js-regression?branch=master) 
-
 # Install
 
 ```bash
-npm install js-regression
+yarn add @kobra-dev/js-regression
 ```
 
 # Usage
