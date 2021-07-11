@@ -61,8 +61,8 @@ export class LogisticRegression {
             config: {
                 alpha: this.alpha,
                 lambda: this.lambda,
-                iterations: this.iterations
-            }
+                iterations: this.iterations,
+            },
         };
     }
 
@@ -142,6 +142,20 @@ export class LogisticRegression {
         }
         return sum;
     }
+
+    save() {
+        return {
+            theta: this.theta,
+            dim: this.dim,
+        };
+    }
+
+    loadAndPredict(json: any, X: any) {
+        this.theta = json.theta;
+        this.dim = json.dim;
+
+        return this.transform(X);
+    }
 }
 
 export class MultiClassLogistic {
@@ -198,7 +212,7 @@ export class MultiClassLogistic {
             this.logistics[c] = new LogisticRegression({
                 alpha: this.alpha,
                 lambda: this.lambda,
-                iterations: this.iterations
+                iterations: this.iterations,
             });
             var data_c = [];
             for (var i = 0; i < N; ++i) {
